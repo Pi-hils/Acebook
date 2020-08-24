@@ -1,0 +1,16 @@
+## Setting up Files
+Ensure you have installed
+- Rails `gem install rails`
+- [Ruby](https://guides.rubygems.org/rubygems-basics/#installing-gems)
+- [sqlite3](https://www.sqlite.org/download.html)
+- [Node.js](https://nodejs.org/en/download/)
+- [Yarn](https://classic.yarnpkg.com/en/docs/install#mac-stable)
+
+
+## Rails initial files
+Run `rails new [directory]` <br>
+_This should install all the dependencies needed for starting a rails project_
+
+
+## Running Test
+To start your web server, run `rails server` on local machine
