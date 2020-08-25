@@ -1,14 +1,13 @@
 ## Team
-Jake, Hilda, Dillon, Alexis, Matteo
+Jake Cummings, Hilda Amponsah, Dillon Barker, Alexis Simonians, Matteo Micozzi
 
 ### Project Management Tool
-- Trello: 
+- [Trello](https://trello.com/b/Zsn5etsn/acebook-group)
 
  ## Team Values and Code of Conduct.
 - Create separate branches for each card worked on before merging into master
-- When implementing a code, ensure evryone is on the same page - complete a PR.
+- When implementing a code, ensure evryone is on the same page - complete a PR
 - Everyone MUST <u>learn</u>.
-<!-- - Everyone must  -->
 - Respect each other, be open, raise issues in a lovely manner
 - Have fun!
 - Run your code Linter
@@ -21,11 +20,11 @@ Jake, Hilda, Dillon, Alexis, Matteo
 ## Agreed Schedule (flexible)
 - Hours of Work: 9:45am - 5pm
 
-- Standups : 
-  Morning: 9:45am - 10am,
+- Standups : <br>
+  Morning: 9:45am - 10am,<br>
   Afternoon: 2pm - 2:30pm
 
-- Retro :
+- Retro :<br>
   Evening(flexible): 4:45pm
 
 - Lunch: 12:30pm - 2pm

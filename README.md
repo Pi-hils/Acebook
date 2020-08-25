@@ -1,3 +1,12 @@
+## Database Schema
+[![Image from Gyazo](https://i.gyazo.com/3dbf8a41b8eadc42aee64bd7936a427b.png)](https://gyazo.com/3dbf8a41b8eadc42aee64bd7936a427b)
+
+[Trello board](https://trello.com/b/Zsn5etsn/acebook-group)
+
+## MVP
+1. Create a Post (CRUD)
+2. View Post
+
 ## Setting up Files
 Ensure you have installed
 - Rails `gem install rails`
@@ -13,4 +22,6 @@ _This should install all the dependencies needed for starting a rails project_
 
 
 ## Running Test
-To start your web server, run `rails server` on local machine
+To start your web server, run `rails server` on local machine.
+
+## User Stories
