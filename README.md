@@ -13,4 +13,9 @@ _This should install all the dependencies needed for starting a rails project_
 
 
 ## Running Test
-To start your web server, run `rails server` on local machine
+To start your web server, run `rails server` / `rails s` on local machine
+
+## MVP
+1. Create a post (CRUD)
+2. View on a post
+
