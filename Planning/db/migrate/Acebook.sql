@@ -1,24 +1,24 @@
-CREATE TABLE "post" (
+CREATE TABLE IF NOT EXIST "post" (
   "id" SERIAL,
   "text" VARCHAR(280),
   "timestamp" date
 );
 
-CREATE TABLE "comment" (
+CREATE TABLE IF NOT EXIST  "comment" (
   "id" SERIAL,
   "text" VARCHAR(280),
   "timestamp" date
 );
 
-CREATE TABLE "users" (
+CREATE TABLE IF NOT EXIST "user" (
   "id" SERIAL,
   "name" VARCHAR(60),
   "password" VARCHAR(60),
   "email" VARCHAR(60)
 );
 
-ALTER TABLE "post" ADD FOREIGN KEY ("id") REFERENCES "users" ("id");
+ALTER TABLE "post" ADD FOREIGN KEY ("id") REFERENCES "user" ("id");
 
-ALTER TABLE "comment" ADD FOREIGN KEY ("id") REFERENCES "users" ("id");
+ALTER TABLE "comment" ADD FOREIGN KEY ("id") REFERENCES "user" ("id");
 
 ALTER TABLE "comment" ADD FOREIGN KEY ("id") REFERENCES "post" ("id");
