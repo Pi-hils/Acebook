@@ -1,12 +1,11 @@
 language: ruby
 rvm:
-- 2.0.0
+- 2.6.5
 - 1.9.3
 - jruby-19mode
 - rbx-2
 
 script:
-- rvm --default use 2.6.5
 - bundle install - jobs=3 - retry=3
 - bundle exec rake db:create
 - bundle exec rake db:migrate
