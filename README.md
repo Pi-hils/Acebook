@@ -25,3 +25,28 @@ _This should install all the dependencies needed for starting a rails project_
 To start your web server, run `rails server` on local machine.
 
 ## User Stories
+```
+As an Acebook,
+So that I can see when my friends are up to date,
+I would like to see posts
+
+As an Acebooker,
+So that my friends can see what I am up to,
+I would like them to see my post
+
+As an Acebooker,
+I want posts to be have text and a created date
+So I can see when they were made
+
+As an Acebooker,
+I want to edit a post,
+To change the content
+
+As an Acebooker,
+So I want to destroy a post,
+To remove it from the database
+
+As an Acebooker,
+I want easy navigation tools,
+So I can get around the website
+```
