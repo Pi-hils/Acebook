@@ -6,6 +6,7 @@ application up and running.
 Things you may want to cover:
 
 * Ruby version
+`ruby 2.6.5p114 (2019-10-01 revision 67812)`
 
 * System dependencies
 
@@ -15,8 +16,6 @@ Things you may want to cover:
 
 * Database initialization
 
-* How to run the test suite
-
 * Services (job queues, cache servers, search engines, etc.)
 
 * Deployment instructions
@@ -25,7 +24,7 @@ Things you may want to cover:
 ## Database Schema
 [![Image from Gyazo](https://i.gyazo.com/3dbf8a41b8eadc42aee64bd7936a427b.png)](https://gyazo.com/3dbf8a41b8eadc42aee64bd7936a427b)
 
-[Trello board](https://trello.com/b/Zsn5etsn/acebook-group)
+The card wall can be found here: [Trello board](https://trello.com/b/Zsn5etsn/acebook-group)
 
 ## MVP
 1. Create a Post (CRUD)
@@ -50,13 +49,37 @@ To start your web server, run `rails server` on local machine.
 
 ## User Stories
 ```
-As an Acebook,
+As a new Acebooker,
+So that I can use the platform,
+I would like to be able to sign up when it is my first time.
+
+As a new Acebooker,
+So I don't need to keeping signing in,
+I would like my device to be able to remember that I am already a user once I have signed up
+
+As a new Acebooker,
+So I can ensure there was no errors whilst typing out my password for the first time,
+I would like to confirm my password again to be certain.
+
+As a new Acebooker,
+So I have a strong password and not be at risk of being hacked,
+I would like an error message to show if my password is weak.
+
+As a new Acebooker,
+So I can provide an accurate email,
+I would like an error message to show if I give the incorrect format/email
+
+As an exisiting Acebooker,
+I would like to be directed to my posts page
+Once I am logged in
+
+As an Acebooker,
 So that I can see when my friends are up to date,
 I would like to see posts
 
 As an Acebooker,
 So that my friends can see what I am up to,
-I would like them to see my post
+I would like them to see my posts
 
 As an Acebooker,
 I want posts to be have text and a created date
@@ -67,10 +90,14 @@ I want to edit a post,
 To change the content
 
 As an Acebooker,
-So I want to destroy a post,
+So I nwant to destroy a post,
 To remove it from the database
 
 As an Acebooker,
 I want easy navigation tools,
 So I can get around the website
+
+As an Acebooker,
+So it is easy navigation,
+I would love a smooth feel and quick navigation
 ```
