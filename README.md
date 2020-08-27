@@ -43,6 +43,12 @@ Ensure you have installed
 Run `rails new [directory]` <br>
 _This should install all the dependencies needed for starting a rails project_
 
+## Running Test
+- Everything at once `bundle exec rspec`.
+- One Rspec package `bundle exec rspec ./spec/models`.
+One RSpec file at a time: `bundle exec rspec ./spec/models/story_spec`.rb.
+-One by one: `bundle exec rspec ./spec/models/story_spec.rb:10`
+This runs only tests on line 10 in the Story model.
 
 ## Running Test
 To start your web server, run `rails server` on local machine.
