@@ -6,9 +6,6 @@ rvm:
 addons:
   - postgresql
 
-before_script:
-  - bundle exec rake db:create db:migrate RAILS_ENV=test
-
 cache:
   bundler: true
   yarn: true
@@ -22,4 +19,6 @@ install:
 
 script:
   - bundle exec rails webpacker:compile
+  - bundle exec rake db:create
+  - bundle exec rake db:migrate
   - bundle exec rspec
