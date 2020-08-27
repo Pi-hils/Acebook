@@ -1,4 +1,4 @@
-require 'rails_helper.rb'
+require '../rails_helper.rb'
 
 feature 'Posts' do
 
