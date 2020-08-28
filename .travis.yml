@@ -6,18 +6,21 @@ services:
 cache:
   bundler: true
   yarn: true
+
 install:
-- bundle install
+#bundle install
 - nvm install node
 - node -v
 - npm i -g yarn
 - yarn
+
 script:
 - bundle exec rails webpacker:compile
 - bundle exec rake db:create
 - bundle exec rake db:migrate
 - bundle exec rspec
+
 deploy:
   provider: heroku
   api_key:
-    secure: fAZxxGGDG7PEqYi+Vo8o79baLhshvYeudo9i7ag/Uzv/iIUr524PYhXEIROHDTDLA+/KoHC6stwgHGJ+iGbrtgDCNwLrXdMCJkUlUP5hoXNgm5H2h8PRZuIIgFQ18XdMmK+Y8tJEhEeBTm3d4k5TOP2YUyBODzj5oky3HVMsn+VU0OS9Y0AO+Uaq046hScSBxHS/ia/KV+Vmc9iOxQtmctap1PQoZtKwC6acfBI7l04FH+Psk4aKjfcHhfFRH9134zOLiQU3jArjySafjUpqLRRidokM5UiLW/qZcP8r8gK8/A6khVofjjGskrWPhGELNNdUqaaZOXDZ3Kg9o9NMeItrJB6pjtJxPO8j+wk4e8PB74nPJOfanMPjeEVW0fc1tYWoC60SXk9Anfwpr0/Q8ZK9tuKW4RG/+uJZS832HdtOscRH2TOKwUx+xc/dSPww0yucsmUZIfglIAlMhoSKSO6g+oOr8gpAg7g6RTt2uvi60+aB2qMVRsM1NCIE/pzXGGM4upCjGfNEewcSvam3REvTiMnqLwgrrXiEuD8DCefGJ/kjm9d0J53si/1isp/f/bNQFAIs9vGEiqa5oQVyciy9/Sw2W4Jhtdme39IikMbUej5yNsA007U4fuM1UhDaoOhfCajdJo7MMVw/VgvJCMEhZKNaPPTOkE9sSyc3adc=
+    secure: "fAZxxGGDG7PEqYi+Vo8o79baLhshvYeudo9i7ag/Uzv/iIUr524PYhXEIROHDTDLA+/KoHC6stwgHGJ+iGbrtgDCNwLrXdMCJkUlUP5hoXNgm5H2h8PRZuIIgFQ18XdMmK+Y8tJEhEeBTm3d4k5TOP2YUyBODzj5oky3HVMsn+VU0OS9Y0AO+Uaq046hScSBxHS/ia/KV+Vmc9iOxQtmctap1PQoZtKwC6acfBI7l04FH+Psk4aKjfcHhfFRH9134zOLiQU3jArjySafjUpqLRRidokM5UiLW/qZcP8r8gK8/A6khVofjjGskrWPhGELNNdUqaaZOXDZ3Kg9o9NMeItrJB6pjtJxPO8j+wk4e8PB74nPJOfanMPjeEVW0fc1tYWoC60SXk9Anfwpr0/Q8ZK9tuKW4RG/+uJZS832HdtOscRH2TOKwUx+xc/dSPww0yucsmUZIfglIAlMhoSKSO6g+oOr8gpAg7g6RTt2uvi60+aB2qMVRsM1NCIE/pzXGGM4upCjGfNEewcSvam3REvTiMnqLwgrrXiEuD8DCefGJ/kjm9d0J53si/1isp/f/bNQFAIs9vGEiqa5oQVyciy9/Sw2W4Jhtdme39IikMbUej5yNsA007U4fuM1UhDaoOhfCajdJo7MMVw/VgvJCMEhZKNaPPTOkE9sSyc3adc="
