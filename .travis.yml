@@ -17,7 +17,5 @@ script:
 - bundle exec rspec
 deploy:
   provider: heroku
-  api_key:
-    secure: GeeKqRKYx//RBeqLHjxlthAFP0Fo1xtbeVxdJyxche7aFDBL9efyJh/SbtBe2mWSLo6BCgHitCw1AGGisnPIrHEfRAAGE/Ig5/S6+iZmMBJ+O8U0lZVjY6x7RO35mlpJN6wjbZPB6YQgjJ8bNeOIeqcx5BM8uU3I+4xVanINioLomae93aoGo4TVrlawmjtJLlKjCnRpbHnjPoUkX9TViny765eC5o2/uHYQB1vjI/BkKP4vhLMd1WbFLr4Q6FXsWB37jjik5mQK+e/2D7L1GSWJk2eTqD+fV+HkkM9grSP27nFFGUNo4g++AjJPk0FwmImZZXlHYzbBWt/NjPJCYSg9Yn/cp0M9VL2P+ds9tFZtKaOlcrZNCgLO3mV+OFmW8IRe3hi43dEOCd3EEcE5WmopXYqqMw2JzUtmfXlhcWohg0+sT5gfiCG+XgA2PZD1kFalsKzWifA811U2T1yMQxI/MovQEiN58/7RBHtdRQja8B/eY71nHpA6Si4md3VUbp0Jv+6tTm9ueTGrNeA3Frln51X7Fj0dxTVIQctzByLZF+pFVoQrDxKId9oqfdBvcOcNbCw1/ch0S5I6Nf5tbeDbX5vlO7FSVytySQbN1+JKyqfCp1mV4ccNpKNBjLm7mJZxqSIT1TYEJjhtmM1dzyx4E/u4xZK/JpOjwLYvC8g=
-  on:
-    repo: Pi-hils/Acebook
+  api_key: 18ce1732-c95a-4881-ae44-808c8d4fc0e7
+
