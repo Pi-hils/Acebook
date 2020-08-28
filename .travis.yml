@@ -19,7 +19,6 @@ deploy:
   provider: heroku
   api_key:
     secure: wfhTLGE+2V/5MyJsR6+6EEd8a/O64ZaguLobDdJD1iLozWPz776teCOQiO2YDmBFCODe39EjxoYPoCwAbu9D9FcXiYyGh4uN4oi3SGN5ff0ti+W28yCR8ROeYam/PIAwjOAU2a5uODpELQK1Q0WZa1uU2bMLwOD3rnQbcD+J3zOwIVbl8JhEecNghHs9iZibT2knLVPXQR03n8yW96vlaH2pgPDKkzyPRAXY3a3TF70HyTe/UHZLrPZHM5XfRoJxnBBxpuaLMaW2owLCKnsAvMdDlzuFBtc3Zj6piv6CpxMr5PxY+WMbCZMl6ej06NktQiLCZcPqEaDPBEMz/UF7OZ7ndDFHSSBLN15mvlKQXMjcwY267/nZ9pPqNY+4koCOfLMPfehS2qVUiq4GmDsjZrWCCR8GFqlcZx8Ii+tstX6pAUBn6v0MLhDsYN2GLm8piSjDTnxU/h0suUlSp7pfOMWcw87WKAorW1RvOe7ebAplMa1/k1DZOixdFgDFRGInjIKDUS+rSviaqRFXQK1/2vcsRnnw/Qw3wFH8DgI8kOaOZH3NqslNh2yjI6mYAyPHYvQfPYu1pgt0QWeEtFnQXrag/2Jhg05wGDxdqFc+RjECm36uDi1+ca9Rvav59a2GZvZZz4G+7R9F79nK8uP2j5OwDD2crd/ZhvsrpP0blgs=
-  strategy: git
   app: secure-forest-28833
   on:
     repo: Pi-hils/Acebook
