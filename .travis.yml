@@ -15,7 +15,11 @@ script:
 - bundle exec rake db:create
 - bundle exec rake db:migrate
 - bundle exec rspec
+
 deploy:
   provider: heroku
-  api_key: 18ce1732-c95a-4881-ae44-808c8d4fc0e7
-
+  api_key:
+    secure: AWQpKXUMrcX+RfkaE3UxIysTuB8fT5uJ45sDSy13jirp+oBTATF320ECnbIfOsb/1h3AUxypMhBwS1tj7kLZD7t3SLUBweXdGM3TZrKfz9Y/b0J+2uPQUmIq+L1d8zuevdFHfXowQOEt6byeEo3NprP70sD7chJSTvEWVOorcUFQxJy0UTuo7m78qipv3e9GPDC2Obe/VmgnxAB5ntirAx1J9JvMB5ZQingU+GX+qK6XrfNzD56a1kT0F3K+8ZAvJbHCjB05VO2ptrFU634vAzqymHkg2KtP84Ng8QYWUgRUYRfEepDawa3MJQ3AvXIrKo7d40w7TilhpRQy5CF0eT4YgmYlBLvEaQHUgjRyj2WoeJ2YXUIQfhblB8HBoR5wrdf/5F0DtCTBniGCbadHLjdUXlw7wNo/Jy1wiadl3+ohcKKGO97I8UyZbeBCqtZ2a/0phr77v1G9QR/XsUHG8LimD2PM2cRf8UDAVhRI0kCprD7IKNfcy6/P3vErNI+7kZUrIToa7slfudJbWZlH0SSFFioD3BGIxf4qmg+tG9YhW1lD5wHH0tNKtvDtBfHdiZPj/rI/udj3c8c+qwyDA8KLn4yJIl2QNAwFtfk149SF4qNa87NbqDVhlUnHpugBDXVRlnXRKo7wPqUvseeNh1pdvyJbuktEE4KjzkmWhl4=
+  app: secure-forest-28833
+  on: 
+    repo: Pi-hils/Acebook
