@@ -30,6 +30,9 @@ The card wall can be found here: [Trello board](https://trello.com/b/Zsn5etsn/ac
 1. Create a Post (CRUD)
 2. View Post
 
+## MVC for MVP
+![image-of-mvc](./images/mvc.png)
+
 ## Setting up Files
 Ensure you have installed
 - Rails `gem install rails`
