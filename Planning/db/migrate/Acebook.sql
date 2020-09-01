@@ -10,15 +10,15 @@ CREATE TABLE IF NOT EXIST  "comment" (
   "timestamp" date
 );
 
-CREATE TABLE IF NOT EXIST "user" (
+CREATE TABLE IF NOT EXIST "account" (
   "id" SERIAL,
   "name" VARCHAR(60),
   "password" VARCHAR(60),
   "email" VARCHAR(60)
 );
 
-ALTER TABLE "post" ADD FOREIGN KEY ("id") REFERENCES "user" ("id");
+ALTER TABLE "post" ADD FOREIGN KEY ("id") REFERENCES "account" ("id");
 
-ALTER TABLE "comment" ADD FOREIGN KEY ("id") REFERENCES "user" ("id");
+ALTER TABLE "comment" ADD FOREIGN KEY ("id") REFERENCES "account" ("id");
 
 ALTER TABLE "comment" ADD FOREIGN KEY ("id") REFERENCES "post" ("id");
