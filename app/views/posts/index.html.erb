@@ -1,14 +1,15 @@
 <h1>Posts thus far</h1>
 <%= link_to 'New Post', new_post_path %>
 
-
 <table>
   <tr>
     <th>Text</th>
     <th>Created At</th>
     <th colspan='2'></th>
   </tr>
- 
+
+ <br>
+
   <% @posts.each do |post| %>
     <tr>
       <td><%= post.text %></td>
