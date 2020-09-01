@@ -3,6 +3,9 @@ Rails.application.routes.draw do
   get 'welcome/index'
  
   resources :posts do
+    member do
+      put 'like' => 'posts#like'
+    end
     resources :comments
   end
 

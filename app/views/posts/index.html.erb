@@ -20,6 +20,19 @@
               method: :delete,
               data: { confirm: 'Are you sure?' } %></td>
     </tr>
+    <div class="like_count">
+    <%= post.get_likes.size %> &#128591
+  </div>
+    <a>  <% if current_account.liked? post %>
+        <div id="preached-btn"> <%= link_to unlike_post_path(post), class: "liked", method: :put, remote: :true do %>
+        Preached </div>
+        <% end%>
+        <% else %>
+        <div id="preach-btn"> <%= link_to like_post_path(post), class: "like-btn", method: :put, remote: :true do %>
+        Preach </div>
+        <% end%>
+        <% end%>
+       <a>
+  </div>
   <% end %>
 </table>
-
