@@ -1,13 +1,16 @@
 require_relative '../rails_helper.rb'
+require_relative '../helpers/sign_up.rb'
 
 feature 'Posts' do
 
   scenario 'list of posts' do
+    sign_up
     visit '/posts'
     expect(page).to have_content('Posts thus far')
   end
 
   scenario 'creating a new post' do
+    sign_up
     visit 'posts/new'
     fill_in 'Text', with: 'Bonjour'
     click_button 'Create Post'
@@ -16,6 +19,7 @@ feature 'Posts' do
   end
 
   scenario 'error a new post' do
+    sign_up
     visit 'posts/new'
     fill_in 'Text', with: 'Hiya'
     click_button 'Create Post'
@@ -23,6 +27,7 @@ feature 'Posts' do
   end
 
   scenario 'posts can be edited' do
+    sign_up
     visit 'posts/new'
     fill_in 'Text', with: 'Bonjour'
     click_button 'Create Post'
@@ -32,6 +37,7 @@ feature 'Posts' do
   end
 
   scenario 'edited posts are saved' do
+    sign_up
     visit 'posts/new'
     fill_in 'Text', with: 'Bonjour'
     click_button 'Create Post'
@@ -44,6 +50,7 @@ feature 'Posts' do
   end
 
   scenario 'posts can be destroyed' do
+    sign_up
     visit 'posts/new'
     fill_in 'Text', with: 'Bonjour'
     click_button 'Create Post'
