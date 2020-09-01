@@ -3,8 +3,13 @@ Rails.application.routes.draw do
   get 'welcome/index'
  
   resources :posts do
-    resources :comments
+    account do
+      put "like" => "posts#like"
+    end
   end
+  
+    resources :comments
+
 
   root 'welcome#index'
 

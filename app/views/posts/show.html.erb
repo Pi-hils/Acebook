@@ -16,3 +16,4 @@
     method: :delete,
     data: { confirm: 'Are you sure?' } %> |
 <%= link_to 'Back', posts_path %>
+ <button type="button">Like</button> <%= @post.liked_by current_account %>
