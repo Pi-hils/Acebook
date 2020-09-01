@@ -29,6 +29,7 @@ gem 'jbuilder', '~> 2.7'
 gem 'bootsnap', '>= 1.4.2', require: false
 gem 'travis'
 gem 'devise'
+gem 'acts_as_votable'
 
 
 group :development, :test do
