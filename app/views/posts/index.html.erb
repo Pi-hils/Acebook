@@ -4,7 +4,7 @@
  <br><br>
 
   <% @posts.each do |post| %>
-      <br><strong><%= post.account.email %></strong><br>
+      <br><strong><%= post.account.username %></strong><br>
       <small><%= post.created_at.to_s(:short)%></small><br>
       <%= post.text %></td><br>
       
@@ -17,7 +17,7 @@
   
     <span class='parent-likes'>
       <span class='like_count' <%=post.id%> >
-        <%= post. get_likes.size %> 
+        <%= post.get_likes.size %> 
       </span>
 
       <a>
