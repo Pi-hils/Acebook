@@ -29,18 +29,22 @@ class PostsController < ApplicationController
 
   def update
     @post = Post.find(params[:id])
-    if @post.account_id == current_account.id
-      if @post.update(post_params)
-        redirect_to @post
+    if Time.now <= @post.created_at + 10.minutes
+      if @post.account_id == current_account.id
+        if @post.update(post_params)
+          redirect_to @post
+        else
+          render 'edit'
+        end
       else
-        render 'edit'
+        flash.alert = "You cannot edit a post that you do not own!"
+        redirect_to posts_path
       end
     else
-      flash.alert = "You cannot edit a post that you do not own!"
-      redirect_to posts_path
+      flash.alert = "It has been too long since you posted this to edit the contents!"
+        redirect_to @post
     end
   end
-
   def destroy
     @post = Post.find(params[:id])
     if @post.account_id == current_account.id
