@@ -13,3 +13,8 @@
  *= require_tree .
  *= require_self
  */
+
+.like-btn a:link{
+    text-decoration:none; 
+}
+
