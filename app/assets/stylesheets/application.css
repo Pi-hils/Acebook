@@ -14,14 +14,7 @@
  *= require_self
  */
 
-
- .margin-top-md {
-	margin-top: 10px;
-}
-.votingBtn a {
-	color: #333;
+.like-btn a:link{
+    text-decoration:none; 
 }
 
-.votingBtn a.liked {
-	color: blue;
-}
