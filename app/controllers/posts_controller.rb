@@ -29,17 +29,25 @@ class PostsController < ApplicationController
 
   def update
     @post = Post.find(params[:id])
-   
-    if @post.update(post_params)
-      redirect_to @post
+    if @post.account_id == current_account.id
+      if @post.update(post_params)
+        redirect_to @post
+      else
+        render 'edit'
+      end
     else
-      render 'edit'
+      flash.alert = "You cannot edit a post that you do not own!"
+      redirect_to posts_path
     end
   end
 
   def destroy
     @post = Post.find(params[:id])
-    @post.destroy
+    if @post.account_id == current_account.id
+      @post.destroy
+    else
+      flash.alert = "You cannot delete a post that you do not own!"
+    end
 
     redirect_to posts_path
   end
