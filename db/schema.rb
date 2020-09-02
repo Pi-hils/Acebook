@@ -72,6 +72,7 @@ ActiveRecord::Schema.define(version: 2020_09_01_152211) do
     t.index ["votable_type", "votable_id"], name: "index_votes_on_votable_type_and_votable_id"
     t.index ["voter_id", "voter_type", "vote_scope"], name: "index_votes_on_voter_id_and_voter_type_and_vote_scope"
     t.index ["voter_type", "voter_id"], name: "index_votes_on_voter_type_and_voter_id"
+
   end
 
   add_foreign_key "comments", "posts"
