@@ -1,4 +1,5 @@
 class PostsController < ApplicationController
+  respond_to :js, :html, :json
   before_action :authenticate_account!
 
   def index
@@ -54,6 +55,15 @@ class PostsController < ApplicationController
     end
 
     redirect_to posts_path
+  end
+
+  def like
+    @post = Post.find(params[:id])
+    if params[:format] == "like"
+      @post.liked_by current_account
+    elsif params[:format] == "unlike"
+      @post.unliked_by current_account
+    end
   end
 
   private
