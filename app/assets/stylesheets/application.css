@@ -13,3 +13,15 @@
  *= require_tree .
  *= require_self
  */
+
+
+ .margin-top-md {
+	margin-top: 10px;
+}
+.votingBtn a {
+	color: #333;
+}
+
+.votingBtn a.liked {
+	color: blue;
+}
