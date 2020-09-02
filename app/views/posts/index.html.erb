@@ -1,38 +1,42 @@
 <h1>Posts thus far</h1>
 <%= link_to 'New Post', new_post_path %>
 
-<table>
-  <tr>
-    <th>Text</th>
-    <th>Created At</th>
-    <th colspan='2'></th>
-  </tr>
-
- <br>
+ <br><br>
 
   <% @posts.each do |post| %>
-    <tr>
-      <td><%= post.text %></td>
-        <td><%= post.created_at.to_s(:short)%></td>
-      <td><%= link_to 'Show', post_path(post) %></td>
-      <td><%= link_to 'Edit', edit_post_path(post) %></td>
-      <td><%= link_to 'Destroy', post_path(post),
+      <br><strong><%= post.account.email %></strong><br>
+      <small><%= post.created_at.to_s(:short)%></small><br>
+      <%= post.text %></td><br>
+      
+      <%= link_to 'Show', post_path(post) %>
+      <%= link_to 'Edit', edit_post_path(post) %>
+      <%= link_to 'Destroy', post_path(post),
               method: :delete,
-              data: { confirm: 'Are you sure?' } %></td>
-    </tr>
-    <div class="like_count">
-    <%= post.get_likes.size %> &#128591
-  </div>
-    <a>  <% if current_account.liked? post %>
-        <div id="preached-btn"> <%= link_to unlike_post_path(post), class: "liked", method: :put, remote: :true do %>
-        Preached </div>
-        <% end%>
-        <% else %>
-        <div id="preach-btn"> <%= link_to like_post_path(post), class: "like-btn", method: :put, remote: :true do %>
-        Preach </div>
-        <% end%>
-        <% end%>
-       <a>
-  </div>
+              data: { confirm: 'Are you sure?' } %>
+    
+  
+    <span class='parent-likes'>
+      <span class='like_count' <%=post.id%> >
+        <%= post. get_likes.size %> 
+      </span>
+
+      <a>
+        <% if current_account.liked? post %>
+          <div> <%= button_to like_post_path(post, 'unlike'), class: "liked-btn",
+          method: :put, remote: :true do %> 💙 </div>
+          <% end %>
+          <% else %>
+          <div> <%= button_to like_post_path(post, 'like'), class: "like-btn",
+          method: :put, remote: :true do %> 🤍 </div>
+          <% end %>
+          <% end %>
+      </a>
+      </span>
+
+
+
+
+
+
   <% end %>
 </table>
