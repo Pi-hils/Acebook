@@ -30,6 +30,7 @@ gem 'bootsnap', '>= 1.4.2', require: false
 gem 'travis'
 gem 'devise'
 gem 'acts_as_votable'
+gem 'jquery-rails'
 
 
 group :development, :test do

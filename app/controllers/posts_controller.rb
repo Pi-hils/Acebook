@@ -57,12 +57,24 @@ class PostsController < ApplicationController
     redirect_to posts_path
   end
 
+  # def like
+  #   @post = Post.find(params[:id])
+  #   if params[:format] == "like"
+  #     @post.liked_by current_account
+  #   elsif params[:format] == "unlike"
+  #     @post.unliked_by current_account
+  #   end
+  # end
+
   def like
     @post = Post.find(params[:id])
-    if params[:format] == "like"
-      @post.liked_by current_account
-    elsif params[:format] == "unlike"
+    if current_account.liked? @post
       @post.unliked_by current_account
+    else
+      @post.liked_by current_account
+    end
+    respond_to do |format|
+      format.js
     end
   end
 
