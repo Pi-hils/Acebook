@@ -16,27 +16,29 @@
               data: { confirm: 'Are you sure?' } %>
      </small>
 
-      <a>
-      <%# likes %>
-        <% if current_account.liked? post %>
-          <div> <%= button_to like_post_path(post, 'unlike'), class: "liked-btn",
-          method: :put, remote: :true do %> 💙 </div>
-          <% end %>
-          <% else %>
-          <div> <%= button_to like_post_path(post, 'like'), class: "like-btn",
-          method: :put, remote: :true do %> 🤍 </div>
-          <% end %>
-          <% end %>
-          
-          <span class='parent-likes'>
-          <span class='like_count' <%=post.id%> >
-            <%= post.get_likes.size %> 
-          </span>
-          </a>
- </div><br><br>
-      </span>
+  <div>
+    <div class="votes">
+      <% if current_account.liked? post %>
+        <%= link_to unlike_post_path(post), method: :get, remote: true, class: 'unlike_post' do %>
+        unlike
+        <% end %>
+      <% else %>
+        <%= link_to like_post_path(post), method: :get, remote: true, class: 'like_post' do %>
+        like
+        <% end %>
+      <% end %>
+    </div>
+    <div class='votes_count'>
+      <%= post.get_likes.size %>
+    </div>
+  </div>
+     
   <% end %>
-  <%# likes end %>
+  
+
+
+
+
 
  <br>
 <div class='indexlink'>

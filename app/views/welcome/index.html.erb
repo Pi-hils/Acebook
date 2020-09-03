@@ -1,17 +1,17 @@
 <style>
-  body {
-    background-image: url('');
-  }
+  
 </style>
 
-<div class= "animated bounce infinite">
+<%# <div class= "animated bounce infinite"> %>
 <div class='welcome'>
+<div id="titlemessage">
 <h1>Welcome to the Uckerbergs' Acebook</h1>
+</div>
 <p><%if current_account%>Hi <%=current_account.username%>! Hope you have a great time! <%end%></p> <br>
+<div id="account_btn">
 <% if account_signed_in? %>
 
-<%= link_to 'My Posts', controller: 'posts' %>
-<%= link_to 'Sign Out', destroy_account_session_path, method: :delete %>
+<%= link_to 'Posts', controller: 'posts' %>
 
 <% else %>
      
@@ -19,6 +19,8 @@
  <%= link_to 'Sign in', new_account_session_path, class:'btn btn-primary' %>
 
  <% end %>
+
+ </div>
 
   </div>
 </div>
