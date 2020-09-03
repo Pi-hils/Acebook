@@ -1,37 +1,33 @@
 <h1>Posts thus far</h1>
 <%= link_to 'New Post', new_post_path %>
 
- <br><br>
-
-      
-    
-  <br>
-
+ <br><br><br>
+  
   <div class="list-group-item list-group-item-action flex-column align-items-start">
     <div class="d-flex w-100 justify-content-between">
       <h5 class="mb-1"><%current_account.username%></h5>
 
       <small class="text-muted">TIME</small>
-    </div>
+  </div>
     <p class="mb-1"><% @posts.each do |post| %></p>
       <br><strong><%= post.account.username %></strong><br>
       <small><%= post.created_at.to_s(:short)%></small><br>
       <%= post.text %></td><br>
     
-         <%= link_to 'Comment', post_path(post) %>
-      <%= link_to 'Edit', edit_post_path(post) %>
-      <%= link_to 'Destroy', post_path(post),
+          <%= link_to 'Comment', post_path(post) %>
+          <%= link_to 'Edit', edit_post_path(post) %>
+          <%= link_to 'Destroy', post_path(post),
               method: :delete,
               data: { confirm: 'Are you sure?' } %>
     
-              <div class="like-btn">
-              <%= link_to like_post_url(post), method: 'put', remote: true do %>
-                <span class="likeimg">🤍</span>
-              <% end %>
+          <div class="like-btn">
+            <%= link_to like_post_url(post), method: 'put', remote: true do %>
+              <span class="likeimg">🤍</span>
+            <% end %>
               <span class="likeCount"><%= post.get_likes.count %></span>
-              </div>
+          </div>
 
       </span>
 
   <% end %>
-</table>
+

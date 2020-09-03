@@ -1,4 +1,4 @@
-<% if current_account.liked? @post %>
+<% if current_account.liked? post %>
   $('.like-btn').addClass('liked');
   $('.likeimg').text("💙");
 <% else %>
@@ -6,4 +6,5 @@
   $('.likeimg').text("🤍");
 <% end %>
 
-$('.like-btn .likeCount').html('<%= @post.get_likes.size %>');
+$('.like-btn .likeCount').html('<%= post.get_likes.size %>');
+
