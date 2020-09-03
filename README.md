@@ -53,7 +53,7 @@ To start your web server, run `rails server` on local machine.
 
 ## Test coverage and code quality
 
-* 
+![image code qual]()
 
 ## User Stories
 
