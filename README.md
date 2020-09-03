@@ -1,62 +1,62 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is a projects where we are trying to recreate Facebook.
 
-Things you may want to cover:
+[Team charter](https://github.com/Pi-hils/Acebook/blob/master/Planning/Team_Charter.md)
 
-* Ruby version
-`ruby 2.6.5p114 (2019-10-01 revision 67812)`
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
 ## Database Schema
+
 [![Image from Gyazo](https://i.gyazo.com/3dbf8a41b8eadc42aee64bd7936a427b.png)](https://gyazo.com/3dbf8a41b8eadc42aee64bd7936a427b)
 
 The card wall can be found here: [Trello board](https://trello.com/b/Zsn5etsn/acebook-group)
 
 ## MVP
-1. Create a Post (CRUD)
-2. View Post
+
+* Create a Post (CRUD) that could be seen by anyone visiting the website
 
 ## MVC for MVP
-![image-of-mvc](./images/mvc.png)
+
+![image-of-mvc](https://raw.githubusercontent.com/Pi-hils/Acebook/master/app/assets/images/mvc.png)
 
 ## Setting up Files
+
 Ensure you have installed
-- Rails `gem install rails`
-- [Ruby](https://guides.rubygems.org/rubygems-basics/#installing-gems)
-- [sqlite3](https://www.sqlite.org/download.html)
-- [Node.js](https://nodejs.org/en/download/)
-- [Yarn](https://classic.yarnpkg.com/en/docs/install#mac-stable)
 
+* Rails
+* [Ruby](https://guides.rubygems.org/rubygems-basics/#installing-gems)
+* [postgreSQL](https://www.postgresql.org/download/)
+* [Node.js](https://nodejs.org/en/download/)
+* [Yarn](https://classic.yarnpkg.com/en/docs/install#mac-stable)
 
-## Rails initial files
-Run `rails new [directory]` <br>
-_This should install all the dependencies needed for starting a rails project_
+## Setting up environment
 
-## Running Test
-- Everything at once `bundle exec rspec`.
-- One Rspec package `bundle exec rspec ./spec/models`.
-One RSpec file at a time: `bundle exec rspec ./spec/models/story_spec`.rb.
--One by one: `bundle exec rspec ./spec/models/story_spec.rb:10`
-This runs only tests on line 10 in the Story model.
+* clone this repo
+* run ```bundle install```
+* run ```rails db:create```
+* run ```rails db:migrate```
 
 ## Running Test
+
+* To run the test: ```rspec```
+
+## Starting local server
+
 To start your web server, run `rails server` on local machine.
 
+## Travis
+
+* Every versions of our master branch is tested by Travis. If successful, the master branch is pushed to deployment at Heroku.
+
+## Heroku
+
+* We have deployed the master branch of this project to: [this address](https://acebook-uckerbergs.herokuapp.com/)
+
+## Test coverage and code quality
+
+* 
+
 ## User Stories
+
 ```
 As a new Acebooker,
 So that I can use the platform,
