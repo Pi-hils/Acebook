@@ -19,8 +19,7 @@ a {
 }
 
 .welcome h1{
-  padding-top: 30%;
-
+  padding-top: 10%;
 }
 
 .animated p{
@@ -37,5 +36,86 @@ a {
 }
 
 .show_com p{
-  font-size:20px
+  font-size:20px;
+}
+
+#newpost h1{
+  font-size: 30px;
+}
+
+#postform p{
+  font-size: 20px;
+}
+
+.navbar-brand {
+  background-image: url("Ukebergs.png");
+  background-size: contain;
+  height: 50px;
+  width: 50px;
+}
+
+#titlemessage {
+  animation-name: slidefromtop;
+  animation-duration: 1s;
+  animation-fill-mode: both;
+  @keyframes slidefromtop {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+    from {
+      transform: translate3d(0, -100%, 0);
+      visibility: visible;
+    };
+  };
+}
+
+#account_btn {
+  padding-top: 20%;
+}
+
+input[type=text], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+input[type=password], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+input[type=email], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+body {
+  background-image: url('https://user-images.githubusercontent.com/57604942/92002761-20a72d80-ed38-11ea-84bf-a9b961ca6bfa.jpg');
+}
+
+#session_table {
+  background-color: white;
+  box-shadow: 5px 5px 10px #272727;
+  border:1em solid #FFFFFF;
+  margin-top: 5%;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  margin-left: 30%;
+  margin-right: 30%;
 }
