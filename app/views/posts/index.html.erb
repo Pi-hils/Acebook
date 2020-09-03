@@ -1,31 +1,23 @@
-<h1>Posts thus far</h1>
-<%= link_to 'New Post', new_post_path %>
+<br>
+<br>
 
- <br><br>
-
-      
-    
-  <br>
-
+<%# <ul class='list-group'> %>
+<% @posts.each do |post| %>
   <div class="list-group-item list-group-item-action flex-column align-items-start">
-    <div class="d-flex w-100 justify-content-between">
-      <h5 class="mb-1"><%current_account.username%></h5>
-
-      <small class="text-muted">TIME</small>
-    </div>
-    <p class="mb-1"><% @posts.each do |post| %></p>
-      <br><strong><%= post.account.username %></strong><br>
-      <small><%= post.created_at.to_s(:short)%></small><br>
-      <%= post.text %></td><br>
-    
-         <%= link_to 'Comment', post_path(post) %>
+    <%# <div class="d-flex w-100 justify-content-between"><br> %>
+      <h5 class="mb-1"><%= current_account.username %></h5>
+      <small class="text-muted"><%= post.created_at.to_s(:short)%><br></small>
+      <br>
+        <strong><%= post.text%></td></strong><br>
+      <small class="text-muted"><%= link_to 'Comment', post_path(post) %>
       <%= link_to 'Edit', edit_post_path(post) %>
       <%= link_to 'Destroy', post_path(post),
               method: :delete,
               data: { confirm: 'Are you sure?' } %>
-  
-  
+     </small>
+
       <a>
+      <%# likes %>
         <% if current_account.liked? post %>
           <div> <%= button_to like_post_path(post, 'unlike'), class: "liked-btn",
           method: :put, remote: :true do %> 💙 </div>
@@ -41,8 +33,12 @@
             <%= post.get_likes.size %> 
           </span>
           </a>
-
+ </div><br><br>
       </span>
-
   <% end %>
-</table>
+  <%# likes end %>
+
+ <br>
+<div class='indexlink'>
+  <p><%= link_to 'Create New Post', new_post_path %></p>
+</div>
