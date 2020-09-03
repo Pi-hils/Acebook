@@ -1,20 +1,26 @@
 <h2>Log in</h2>
 
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-  <div class="field">
-  <%= f.label :username %><br />
-  <%= f.text_field :username, autofocus: true, autocomplete: "username" %>
+   <div class="field">
+  <div class="fas fa-user-alt">
+    <%= f.text_field :username, autofocus: true, autocomplete: "username", placeholder:"Username" %>
+  </div>
   </div>
 
+<br>
   <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+    <div class="fas fa-envelope-open">
+    <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder:"Email"%>
+  </div>
   </div>
 
+<br>
   <div class="field">
-    <%= f.label :password %><br />
-    <%= f.password_field :password, autocomplete: "current-password" %>
+  <div class='fas fa-user-lock'>
+    <%= f.password_field :password, autocomplete: "new-password", placeholder:'Password' %>
   </div>
+  </div>
+<br>
 
   <% if devise_mapping.rememberable? %>
     <div class="field">

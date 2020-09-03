@@ -8,8 +8,11 @@
     <%= csp_meta_tag %>
     
     <%# <%= stylesheet_link_tag '/assets/stylesheets/welcome.scss' %>
+    <%# <%= link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" %> 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
   </head>
 
   <body>
@@ -34,9 +37,13 @@
           <li class="nav-item">
             <a class="nav-link" href="/">Sign Out</a>
           </li>
+
           <% else %>
                    <li class="nav-item active">
-            <a class="nav-link" href="/posts">Login</a>
+            <a class="nav-link" href="/accounts/sign_in">Login</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/accounts/sign_up">Sign Up</a>
           </li>
       <%end%>
 

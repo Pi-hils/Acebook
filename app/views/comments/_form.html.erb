@@ -1,9 +1,14 @@
+<div class='comment'>
+
 <%= form_with(model: [ @post, @post.comments.build ], local: true) do |form| %>
 
+
   <p>
-    <%= form.text_area :body %>
+    <%= form.text_area :body, placeholder:'Add a comment'%>
   </p>
   <p>
     <%= form.submit %>
   </p>
+  </small>
 <% end %>
+</div>
