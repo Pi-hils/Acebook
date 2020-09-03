@@ -23,33 +23,13 @@
       <%= link_to 'Destroy', post_path(post),
               method: :delete,
               data: { confirm: 'Are you sure?' } %>
-<<<<<<< HEAD
-  
-  
-      <a>
-        <% if current_account.liked? post %>
-          <div> <%= button_to like_post_path(post, 'unlike'), class: "liked-btn",
-          method: :put, remote: :true do %> 💙 </div>
-          <% end %>
-          <% else %>
-          <div> <%= button_to like_post_path(post, 'like'), class: "like-btn",
-          method: :put, remote: :true do %> 🤍 </div>
-          <% end %>
-          <% end %>
-          
-          <span class='parent-likes'>
-          <span class='like_count' <%=post.id%> >
-            <%= post.get_likes.size %> 
-          </span>
-          </a>
-=======
     
-
-
-
-
-
->>>>>>> master
+              <div class="like-btn">
+              <%= link_to like_post_url(post), method: 'put', remote: true do %>
+                <span class="likeimg">🤍</span>
+              <% end %>
+              <span class="likeCount"><%= post.get_likes.count %></span>
+              </div>
 
       </span>
 
