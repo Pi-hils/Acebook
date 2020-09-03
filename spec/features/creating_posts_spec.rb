@@ -3,12 +3,6 @@ require_relative '../helpers/sign_up.rb'
 
 feature 'Posts' do
 
-  scenario 'list of posts' do
-    sign_up
-    visit '/posts'
-    expect(page).to have_content('Uckerberg')
-  end
-
   scenario 'creating a new post' do
     sign_up
     visit 'posts/new'
