@@ -1,6 +1,6 @@
 # README
 
-This is a projects where we are trying to recreate Facebook.
+This is a project where we are trying to recreate Facebook.
 
 [Team charter](https://github.com/Pi-hils/Acebook/blob/master/Planning/Team_Charter.md)
 
