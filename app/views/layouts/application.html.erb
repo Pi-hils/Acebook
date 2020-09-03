@@ -56,10 +56,10 @@
     </div>
   </div> 
 
-
+  
     <% flash.each do |type, msg| %>
-      <div>
-        <%= msg %>
+      <div id="error_message">
+        <%= msg %><br>
       </div>
     <% end %>
 
