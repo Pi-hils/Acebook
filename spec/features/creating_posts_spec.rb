@@ -6,7 +6,7 @@ feature 'Posts' do
   scenario 'list of posts' do
     sign_up
     visit '/posts'
-    expect(page).to have_content('Posts thus far')
+    expect(page).to have_content('Uckerberg')
   end
 
   scenario 'creating a new post' do
