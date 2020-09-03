@@ -1,9 +1,5 @@
-<% if current_account.liked? @post %>
-  $('.like-btn').addClass('liked');
-  $('.likeimg').text("💙");
-<% else %>
-  $('.like-btn').removeClass('liked');
-  $('.likeimg').text("🤍");
-<% end %>
-
-$('.like-btn .likeCount').html('<%= @post.get_likes.size %>');
+$('.like_post').bind('ajax:success', function() {
+  $(this).parent().parent().find('.votes_count').html('<%= escape_javascript post.votes_for.size.to_s %>');
+  $(this).closest('.like_post').hide();
+  $(this).closest('.votes').html(' <%= link_to "Unlike", unlike_post_path(post), remote: true, method: :get, class: 'unlike_post' %>');
+});
