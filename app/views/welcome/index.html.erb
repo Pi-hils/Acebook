@@ -1,10 +1,19 @@
 <div class='welcome'>
 <div id="titlemessage">
+<% unless current_account %>
 <h1>Welcome to the Uckerbergs' Acebook</h1>
+<%end%>
 </div>
-<p><%if current_account%>Hi <%=current_account.username%>! Hope you have a great time! <%end%></p> <br>
+<div id='greeting'>
+<p><%if current_account%>Hi <%=current_account.username%>! Tell your friends what you're up to! <%end%></p>
+</div>
 <div id="account_btn">
 <% if account_signed_in? %>
+  
+<div id="splashpost">
+<% @post = Post.new %>
+<%= render './posts/form', controller: 'posts' %>
+</div>
 
 <% else %>
      

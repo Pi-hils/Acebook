@@ -16,6 +16,15 @@ a {
   font-size:20px;
   text-decoration: underline;
   font-weight: bolder;
+  background-color: white;
+  border:1em solid #FFFFFF;
+  margin-top: 5%;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  margin-left: 35%;
+  margin-right: 35%;
 }
 
 .welcome h1{
@@ -120,6 +129,18 @@ body {
   margin-right: 30%;
 }
 
+#splashpost{
+  background-color: white;
+  box-shadow: 5px 5px 10px #272727;
+  border:1em solid #FFFFFF;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  margin-left: 30%;
+  margin-right: 30%;
+}
+
 #error_explanation {
   font-size: 15px;
   color: red;
@@ -132,6 +153,10 @@ body {
   border-bottom-left-radius: 20px;
   margin-left: 30%;
   margin-right: 30%;
+}
+
+#greeting{
+  margin-top:5%;
 }
 
 #error_explanation h2{
