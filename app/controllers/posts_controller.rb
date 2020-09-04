@@ -3,7 +3,7 @@ class PostsController < ApplicationController
   before_action :authenticate_account!
 
   def index
-    @posts = Post.all
+    @posts = Post.newest_first
   end
 
   def show
