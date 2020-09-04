@@ -1,3 +1,11 @@
+
+
+<div class='indexlink'>
+  <p><%= link_to 'Create New Post', new_post_path %></p>
+</div>
+
+<br><br>
+
 <% @posts.each do |post| %>
   <div class="list-group-item list-group-item-action flex-column align-items-start">
       <h5 class="mb-1"><%= post.account.username %></h5>
@@ -31,6 +39,3 @@
   <% end %>
 
  <br>
-<div class='indexlink'>
-  <p><%= link_to 'Create New Post', new_post_path %></p>
-</div>
