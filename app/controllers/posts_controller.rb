@@ -61,7 +61,7 @@ class PostsController < ApplicationController
     @post = Post.find(params[:id])
     @post.liked_by current_account
     respond_to do |format|
-      format.html { redirect_to :back }
+      format.html { redirect_back(fallback_location: posts_path) }
       format.js { render layout: false }
     end
   end
@@ -70,7 +70,7 @@ class PostsController < ApplicationController
     @post = Post.find(params[:id])
     @post.unliked_by current_account
     respond_to do |format|
-      format.html { redirect_to :back }
+      format.html { redirect_back(fallback_location: posts_path) }
       format.js { render layout: false }
     end
   end
