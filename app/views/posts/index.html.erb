@@ -11,7 +11,7 @@
               data: { confirm: 'Are you sure?' } %>
      </small>
 
-  <div>
+  
     <div class="votes">
       <% if current_account.liked? post %>
         <%= link_to unlike_post_path(post), method: :get, remote: true, class: 'unlike_post' do %>
@@ -26,8 +26,8 @@
     <div class='votes_count'>
       <%= post.get_likes.size %>
     </div>
-  </div>
-     
+
+  </div><br><br>
   <% end %>
 
  <br>
