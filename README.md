@@ -53,7 +53,7 @@ To start your web server, run `rails server` on local machine.
 
 ## Test coverage and code quality
 
-* 
+![image code qual](https://raw.githubusercontent.com/Pi-hils/Acebook/code_qual/app/assets/images/image.png)
 
 ## User Stories
 
