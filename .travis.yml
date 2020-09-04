@@ -1,22 +1,22 @@
 language: ruby
 cache:
-  - bundler
-  - yarn
+- bundler
+- yarn
 services:
-  - postgresql
+- postgresql
 before_install:
-  - nvm install --lts
+- nvm install --lts
 before_script:
-  - bundle install --jobs=3 --retry=3
-  - yarn
-  - bundle exec rake db:create
-  - bundle exec rake db:schema:load
+- bundle install --jobs=3 --retry=3
+- yarn
+- bundle exec rake db:create
+- bundle exec rake db:schema:load
 script:
-  - bundle exec rspec
+- bundle exec rspec
 deploy:
   provider: heroku
   api_key:
-    secure: yb8hQz5U3r1sVDsoCpzkKfpjgDjL69sUbQ5hCQWLBoqcay9GckZwzog++pSYJb1S/ZsBz9o/+wTPZkUSCgD7xFtx1qScU35Rv9NToZs284mTORFRoA2g/4AUqy1dG/FcGi3wj60oYtV+tz/V1FatMfpWG7ZtUSbGPS84uzfESfUGPPkT7DU4M2YFdbKGrxaLBK2O4lMJTSQVB+Cwlm5sVMUtoa8hhuxAHw3lv7InA5dtVVwwpOIdlDD9AEQxqBuBHR09wE7oUwHJ/pADJ96MJ8v3YNbQs49h0kfth26AkFvg3o17028Wk/G78m38B69C46IY06tFdohLJX5VOAE21Rkb+TyGIfigN7QMnsN09fN0MJDWtgbAxdGzEHbxa+Akag9i/avKq4u5fkCLj7g5BjqRXHOxL/Koxw4oR/iCYH6JHNXkUbCl/jbypNmdlkBPVZnmAmK1amLha1iPkfqA69Mg9cy9/Pb2SOY0/Zipwxer3a8NkmYmkKSAv+RMPild51WLZAMqgAlQDQHSwQV9C7mCmO7C/+i+8lOgkVbmngbkTumO2PNj8X6IbLzLDOSffzE9EJ8VuKMhyCE0Iaj/OZh1CKhavkEVAP2lziOrgJS8plNmL4zQrhXwz1VnOBGDjDq6mIawPhILxE+e42NPYL5j8BUmx2gwB7TQugelMp8=
+    secure: DiwGTDPC5etXV1AKDgrmPlqd5KHtwpfviibd+Uz7kGWPilB6hnGDc8MwJfj4LZIauYFiFImLrgjjPchWDHSixaRyc9maxLaRXbQMx2aauEVv9MPK2ktr93ILWMWupI7PV4ZFU/y4Rw40DNfY7BZlhg6QsvchcBPbDzikZb1gOD23U8CdvLda/RmXt5AnmzXy96XCcSwCfnfg6TbehOd3da7jfMpvAC1srrpli0WIp7CRnmEXC9YGKF4oBfwhnO62V+jCZ1TWe9ELqIUbin2pHPgdLAflB3HxAFPgushf0WxEIZ7NwVKkgK1FG+qRd8BYrZqUhmEokIKheNvBmjcvAP0uXnArBi7NzPnreQWzuuyy76/YmMj3xUh22LoBpBkKd9k3VF4w01HyNIZ8LWZhcQXFdJoc3Gk+q3PrZEL8TkCQ42SY2ObsK5yAAvCio/IBGMxzurEoMkc1ZN+BkU8tHEniL9wBRe6jXLAgAbPirPtVzZSUrqPK7jf4wHEvmVfOG39FaSVxPPME8IQJWUGgH2P+kkFjbbGhn6EFkUv24jAv8D4TJweHKFuGIZsMnm6vEHkKpdYLZdnD9byTmNUhMhrCAM+SWsnJIBfMkfGVG+Blh9G02n5P2ec0n+Xtm7dmNzDdQEyC+qAQVymo0JF5VKTpolcYn+ttJ1g9ZXBD0eo=
   app: acebook-uckerbergs
   on:
     repo: Pi-hils/Acebook
